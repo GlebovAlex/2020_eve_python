@@ -57,6 +57,8 @@ class EditTalent():
         self.driver.find_element_by_xpath(self.button_Nextcatgry_xpath).click()
         time.sleep(2)
         self.driver.find_element_by_xpath(self.button_Nextpersonal_xpath).click()
+        time.sleep(2)
+        self.driver.find_element_by_xpath(self.button_NextTalent_xpath).click()
 
     # Class method to fill up the Talent Traits tab
     def setTalentTraits(self):
