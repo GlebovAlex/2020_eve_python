@@ -26,23 +26,23 @@ class TestPromytheus_Login(unittest.TestCase):
         # calling the HomePage() class from homePage file
         login = HomePage(driver)
         login.setLoginMenu() # calling the setLoginMenu() method from the HomePage() class
-        # title = driver.find_element_by_xpath("//strong[contains(text(),'SIGN IN TO CONTINUE')]").text()
-        # self.assertEqual(title, "SIGN IN TO CONTINUE.")
+        time.sleep(6)
+        print(driver.title)
+        self.assertIn("Sign In", driver.title)
 
     def test_validSignIn(self):
         driver = self.driver
-        driver.get(Locators.url)
+        driver.get("https://app.promytheus.net/sign-in.html")
         # calling the LoginPage() class from loginPage file
         signin = LoginPage(driver)
         signin.setSignIn() # calling the setSignIn() method from the LoginPage() class
-        # heading = self.driver.find_element_by_xpath("//h3[contains(text(),'Talents')]")
-        # self.assertEqual()
+        print(driver.title)
+        self.assertIn("Talents", driver.title)
 
     @classmethod
     def tearDown(cls):
         cls.driver.quit()
 
 
-# if __name__ == "__main__":
-#     unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/priya/Promytheus/Reports"))
-testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/priya/Promytheus/Reports")
+if __name__ == "__main__":
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="C:/Users/priya/Promytheus/Reports"))
