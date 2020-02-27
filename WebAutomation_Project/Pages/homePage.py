@@ -15,3 +15,4 @@ class HomePage():
     # Method to click 'Login' (under Menu) from home page
     def setLoginMenu(self):
         self.driver.find_element_by_xpath(self.login_link).click()
+        self.driver.implicitly_wait(6)
