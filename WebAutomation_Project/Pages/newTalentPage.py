@@ -115,3 +115,34 @@ class NewTalentPage():
         self.driver.find_element_by_xpath(self.checkbox_qtn2_xpath).click()
         time.sleep(2)
         self.driver.find_element_by_xpath(self.button_NextPrsnlty_xpath).click()
+    
+    def setStoryPage(self):
+        self.driver.find_element_by_xpath(self.story_age_xpath).send_keys("9")
+        time.sleep(6)
+        self.driver.find_element_by_xpath(self.stry_nextbtn_xpath).click()
+        self.driver.implicitly_wait(6)
+
+    def setevidencePage(self):
+        self.driver.find_element_by_xpath(self.friends_check_xpath).click()
+        time.sleep(6)
+        self.driver.find_element_by_xpath(self.talent_work_product_xpath).send_keys("Testing this by sending input")
+        self.driver.find_element_by_xpath(self.evidence_tab_next_btn).click()
+        self.driver.implicitly_wait(6)
+
+    def setTrainingPage(self):
+        self.driver.find_element_by_xpath(self.professionally_coached_xpath).click()
+        self.driver.implicitly_wait(6)
+        self.driver.find_element_by_xpath(self.coach_name_xpath).send_keys("Roger")
+        self.driver.find_element_by_xpath(self.success_level_xpath).send_keys("High Level")
+        self.driver.implicitly_wait(6)
+        self.driver.find_element_by_xpath(self.training_button_next_xpath).click()
+
+    def setSocialPage(self):
+        self.driver.find_element_by_xpath(self.marital_status_xpath).click()
+        self.driver.implicitly_wait(6)
+        select = Select(self.driver.find_element_by_xpath(self.marital_status_xpath))
+        select.select_by_value('MARRIED')
+        self.driver.implicitly_wait(6)
+        self.driver.find_element_by_xpath(self.social_button_next_xpath).click()
+        self.driver.implicitly_wait(6)
+        self.driver.find_element_by_xpath(self.finish_button_xpath).click()
