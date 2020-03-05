@@ -62,6 +62,34 @@ class Locators():
     checkbox_qtn2_xpath = "//tr[2]//td[2]//label[1]//span[1]"
     button_NextPrsnlty_xpath = "//div[@class='form-wizard-footer']//button[@class='btn btn-primary ng-binding'][contains(text(),'Next')]"
 
+    # locators for story page
+    story_age_xpath = "//input[@placeholder='Years Old']"
+    story_interest_level_xpath = "//select[@name='interestLevel']"
+    stry_nextbtn_xpath = "//div[@class='form-wizard-footer']//button[@class='btn btn-primary ng-binding'][contains(text(),'Next')]"
 
+    # locators for evidence page
+    friends_check_xpath = "//label[contains(text(), 'Friends')]/span"
+    talent_work_product_xpath = "//input[@placeholder='Enter work product']"
+    evidence_tab_next_btn = "//div[@class='form-wizard-footer']//button[@class='btn btn-primary ng-binding'][contains(text(),'Next')] "
+
+    # locators for Training page
+    professionally_coached_xpath = "//label[contains(text(),'Yes')]"
+    coach_name_xpath = "//div[@class='col-lg-8']//input[@placeholder='Enter Name']"
+    success_level_xpath = "//div[@class='col-lg-3']//input[@placeholder='Enter Success level']"
+    skill_level_xpath = "//label[contains(text(),'Advanced')]"
+    training_button_next_xpath = "//div[@class='form-wizard-footer']//button[@class='btn btn-primary ng-binding'][contains(text(),'Next')] "
+
+    # locators for Social page
+    marital_status_xpath = "//select[@name='maritalStatus']"
+    social_button_next_xpath = "//div[@class='form-wizard-footer']//button[@class='btn btn-primary ng-binding'][contains(text(),'Next')]"
+
+    # Finish button
+    finish_button_xpath = "//button[contains(text(),'Finish')]"
+
+    # locators to check negative tests
+    message_invalidSignIn = "//span[@class='text-danger']"
+    message_invalidemail = "//div[@class='alert alert-danger ng-binding ng-scope']"
+    
+    
     def __init__(self, driver):
         driver = self.driver
