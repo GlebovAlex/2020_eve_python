@@ -1,7 +1,4 @@
 name: Web-Automation
-env:
- APPLICATION_NAME: "Promytheus" 
- 
 
 on:
   push:
