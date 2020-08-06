@@ -9,10 +9,13 @@ After you can download and install the python modules into a segregated virtuale
 ```bash
 # install python and create virtualenv
 pyenv install 3.8.2
+
 # Create virtualenv
 python3 -m venv env
+
 # Activate virtual environment
 source env/bin/activate
+
 # update pip module
 pip3 install --upgrade pip
 ```
