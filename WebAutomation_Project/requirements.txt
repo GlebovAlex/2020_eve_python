@@ -1,0 +1,9 @@
+html-testRunner==1.2.1
+Jinja2==2.11.2
+linecache2==1.0.0
+MarkupSafe==1.1.1
+selenium==3.141.0
+six==1.15.0
+traceback2==1.4.0
+unittest2==1.1.0
+urllib3==1.25.10
